@@ -58,7 +58,9 @@ public struct LinkedList<T: Equatable> {
     /// Inserts a new value at the beginning of the linked list.
     /// - Parameter value: The new value to be inserted.
     public mutating func prepend(_ value: T) {
-        
+        let node = Node(value: value)
+        node.next = firstNode
+        firstNode = node
     }
     
     /// Removes the value following the value of the supplied parameter.

@@ -55,4 +55,11 @@ class LinkedListTests: XCTestCase {
         list.pop()
         XCTAssertEqual(list.count, 3)
     }
+    
+    func testPrependValueToLinkedList() {
+        var list = LinkedList<Int>()
+        list.append(5)
+        list.prepend(2)
+        XCTAssertEqual(list.first, 2)
+    }
 }
