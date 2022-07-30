@@ -54,5 +54,5 @@ class LinkedListTests: XCTestCase {
         list.append(8)
         list.pop()
         XCTAssertEqual(list.count, 3)
-    }    
+    }
 }

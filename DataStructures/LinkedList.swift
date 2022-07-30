@@ -22,13 +22,18 @@ public struct LinkedList<T: Equatable> {
     
     public init() { }
     
+    /// Reports whether the linked list contains the value passed in.
+    /// - Parameter value: The value to be checked for membership.
+    /// - Returns: True if value exists in linked list; false if not.
     public func contains(_ value: T) -> Bool {
         for v in self where v == value {
             return true
         }
         return false
     }
-
+    
+    /// Appends new value to the end of the linked list.
+    /// - Parameter value: Value to be appended.
     public mutating func append(_ value: T) {
         guard var node = firstNode else {
             firstNode = Node(value: value)
@@ -42,22 +47,32 @@ public struct LinkedList<T: Equatable> {
         node.next = Node(value: value)
     }
     
+    /// Inserts a new value in the linked list after the second supplied value.
+    /// - Parameters:
+    ///   - value: New value to insert into the linked list.
+    ///   - after: The value that should preceed the added value.
     public mutating func insert(_ value: T, after precedingValue: T) {
         
     }
     
+    /// Inserts a new value at the beginning of the linked list.
+    /// - Parameter value: The new value to be inserted.
     public mutating func prepend(_ value: T) {
         
     }
     
+    /// Removes the value following the value of the supplied parameter.
+    /// - Parameter value: The value to preceed the value to be removed.
     public mutating func remove(after value: T) {
         
     }
     
+    /// Removes the first value in the linked list.
     public mutating func removeFirst() {
         
     }
     
+    /// Removes the last value in the linked list.
     public mutating func pop() {
         guard var penultimateNode = firstNode else { return }
         guard var finalNode = penultimateNode.next else {
