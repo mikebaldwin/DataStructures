@@ -42,6 +42,22 @@ public struct LinkedList<T: Equatable> {
         node.next = Node(value: value)
     }
     
+    public mutating func insert(_ value: T, after precedingValue: T) {
+        
+    }
+    
+    public mutating func prepend(_ value: T) {
+        
+    }
+    
+    public mutating func remove(after value: T) {
+        
+    }
+    
+    public mutating func removeFirst() {
+        
+    }
+    
     public mutating func pop() {
         guard var penultimateNode = firstNode else { return }
         guard var finalNode = penultimateNode.next else {
