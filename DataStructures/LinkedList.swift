@@ -71,7 +71,10 @@ public struct LinkedList<T: Equatable> {
     
     /// Removes the first value in the linked list.
     public mutating func removeFirst() {
-        
+        if let nextNode = firstNode?.next {
+            firstNode = nil
+            firstNode = nextNode
+        }
     }
     
     /// Removes the last value in the linked list.
