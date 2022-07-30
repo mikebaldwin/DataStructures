@@ -11,6 +11,8 @@
 		CEDD5A9F2895A7A400561720 /* DataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD5A942895A7A300561720 /* DataStructures.framework */; };
 		CEDD5AA42895A7A400561720 /* DataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD5AA32895A7A400561720 /* DataStructuresTests.swift */; };
 		CEDD5AA52895A7A400561720 /* DataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDD5A972895A7A300561720 /* DataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEDD5AAF2895A7E700561720 /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD5AAE2895A7E700561720 /* LinkedListTests.swift */; };
+		CEDD5AB12895A8D400561720 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD5AB02895A8D400561720 /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		CEDD5A982895A7A300561720 /* DataStructures.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DataStructures.docc; sourceTree = "<group>"; };
 		CEDD5A9E2895A7A400561720 /* DataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDD5AA32895A7A400561720 /* DataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructuresTests.swift; sourceTree = "<group>"; };
+		CEDD5AAE2895A7E700561720 /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		CEDD5AB02895A8D400561720 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		CEDD5A962895A7A300561720 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD5AB02895A8D400561720 /* LinkedList.swift */,
 				CEDD5A972895A7A300561720 /* DataStructures.h */,
 				CEDD5A982895A7A300561720 /* DataStructures.docc */,
 			);
@@ -81,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDD5AA32895A7A400561720 /* DataStructuresTests.swift */,
+				CEDD5AAE2895A7E700561720 /* LinkedListTests.swift */,
 			);
 			path = DataStructuresTests;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDD5AB12895A8D400561720 /* LinkedList.swift in Sources */,
 				CEDD5A992895A7A300561720 /* DataStructures.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDD5AAF2895A7E700561720 /* LinkedListTests.swift in Sources */,
 				CEDD5AA42895A7A400561720 /* DataStructuresTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +404,7 @@
 		CEDD5AAC2895A7A400561720 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84MPEV8978;
@@ -412,6 +421,7 @@
 		CEDD5AAD2895A7A400561720 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 84MPEV8978;
