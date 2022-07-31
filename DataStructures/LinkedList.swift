@@ -51,10 +51,10 @@ public struct LinkedList<T: Equatable> {
     /// - Parameters:
     ///   - value: New value to insert into the linked list.
     ///   - after: The value that should preceed the added value.
-    public mutating func insert(_ value: T, after precedingValue: T) {
+    public mutating func insert(_ value: T, after targetValue: T) {
         guard var targetNode = firstNode else { return }
         
-        while targetNode.value != precedingValue {
+        while targetNode.value != targetValue {
             targetNode = targetNode.next!
         }
         
@@ -78,7 +78,11 @@ public struct LinkedList<T: Equatable> {
         guard var targetNode = firstNode else { return }
         
         while targetNode.value != value {
-            targetNode = targetNode.next!
+            if let nextNode = targetNode.next {
+                targetNode = nextNode
+            } else {
+                break
+            }
         }
         
         if let newNextNode = targetNode.next?.next {
