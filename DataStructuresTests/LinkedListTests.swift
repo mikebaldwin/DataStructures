@@ -153,4 +153,45 @@ class LinkedListTests: XCTestCase {
         XCTAssertEqual(values[2], 10)
         XCTAssertEqual(values[3], 8)
     }
+    
+    func testInsertAfterFinalValue() {
+        var list = LinkedList<Int>()
+        
+        list.append(5)
+        list.append(6)
+        list.append(8)
+        list.insert(10, after: 8)
+        
+        var values = [Int]()
+        
+        for value in list {
+            values.append(value)
+        }
+        
+        XCTAssertEqual(values[0], 5)
+        XCTAssertEqual(values[1], 6)
+        XCTAssertEqual(values[2], 8)
+        XCTAssertEqual(values[3], 10)
+    }
+    
+    func testInsertAfterNoMatch() {
+        var list = LinkedList<Int>()
+        
+        list.append(5)
+        list.append(6)
+        list.append(8)
+        list.insert(10, after: 2)
+        
+        var values = [Int]()
+        
+        for value in list {
+            values.append(value)
+        }
+        
+        XCTAssertEqual(values[0], 5)
+        XCTAssertEqual(values[1], 6)
+        XCTAssertEqual(values[2], 8)
+    }
+
+
 }

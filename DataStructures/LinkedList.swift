@@ -55,7 +55,11 @@ public struct LinkedList<T: Equatable> {
         guard var targetNode = firstNode else { return }
         
         while targetNode.value != targetValue {
-            targetNode = targetNode.next!
+            if let nextNode = targetNode.next {
+                targetNode = nextNode
+            } else {
+                break
+            }
         }
         
         let newNode = Node(value: value)
