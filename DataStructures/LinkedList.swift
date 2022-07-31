@@ -52,7 +52,16 @@ public struct LinkedList<T: Equatable> {
     ///   - value: New value to insert into the linked list.
     ///   - after: The value that should preceed the added value.
     public mutating func insert(_ value: T, after precedingValue: T) {
+        guard var targetNode = firstNode else { return }
         
+        while targetNode.value != precedingValue {
+            targetNode = targetNode.next!
+        }
+        
+        let newNode = Node(value: value)
+        
+        newNode.next = targetNode.next
+        targetNode.next = newNode
     }
     
     /// Inserts a new value at the beginning of the linked list.
