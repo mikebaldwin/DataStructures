@@ -63,10 +63,21 @@ public struct LinkedList<T: Equatable> {
         firstNode = node
     }
     
-    /// Removes the value following the value of the supplied parameter.
+    /// Removes the value following the value of the supplied parameter. If the `after` value doesn't exist, no value will be removed from the list.
     /// - Parameter value: The value to preceed the value to be removed.
     public mutating func remove(after value: T) {
+        guard var targetNode = firstNode else { return }
         
+        while targetNode.value != value {
+            targetNode = targetNode.next!
+        }
+        
+        if let newNextNode = targetNode.next?.next {
+            targetNode.next = nil
+            targetNode.next = newNextNode
+        } else {
+            targetNode.next = nil
+        }
     }
     
     /// Removes the first value in the linked list.

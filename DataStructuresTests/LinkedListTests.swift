@@ -71,4 +71,24 @@ class LinkedListTests: XCTestCase {
         list.removeFirst()
         XCTAssertEqual(list.first, 6)
     }
+    
+    func testRemoveAfter() {
+        var list = LinkedList<Int>()
+        
+        list.append(5)
+        list.append(6)
+        list.append(10)
+        list.append(8)
+        list.remove(after: 6)
+        
+        var values = [Int]()
+        
+        for value in list {
+            values.append(value)
+        }
+        
+        XCTAssertEqual(values[0], 5)
+        XCTAssertEqual(values[1], 6)
+        XCTAssertEqual(values[2], 8)
+    }
 }
